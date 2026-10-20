@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -18,11 +18,26 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch merchant images (first run only, then cached in repo)
+        run: |
+          pip install --quiet pillow
+          unzip -o -q source.zip images.json fetch_images.py
+          python fetch_images.py
+      - name: Save images to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add img
+          git diff --cached --quiet || (git commit -m "Add optimized merchant images" && git push)
       - name: Unpack site
         run: |
           mkdir -p _site
           unzip -q site.zip -d _site
-          ls -la _site
+          cp -r img _site/img
+          ls _site _site/img
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
