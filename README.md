@@ -16,7 +16,7 @@ Homepage section `#amazon-picks` (first 8 products) and the full page `/amazon-d
 
 To add or swap a product, edit `AMAZON_PICKS` in `build.py`:
 - `asin`: the 10-character code after `/dp/` in the Amazon product URL.
-- `img`: the image id from the product's main image URL (the part after `/images/I/`, before the first dot).
+- `img`: optional, not shown on the site. Amazon product photos may only be displayed through Amazon's own API (Creators API), never copied or hotlinked from `m.media-amazon.com`, so cards are text-only.
 - `cat`: one of `home`, `hair`, `gifts`, `office` (labels live in `AMAZON_CATS`).
 - Bump `AMAZON_UPDATED` / `AMAZON_UPDATED_HUMAN`, then run `python3 build.py`.
 
