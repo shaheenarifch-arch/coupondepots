@@ -37,6 +37,8 @@ jobs:
           mkdir -p _site
           unzip -q site.zip -d _site
           cp -r img _site/img
+          # Daily blog bot posts (seo-controller) live in articles/ beside the zip.
+          if [ -d articles ]; then cp -r articles _site/articles; fi
           ls _site _site/img
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
