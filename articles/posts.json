@@ -12,5 +12,19 @@
     "google_quality_passed": true,
     "eeat_score": 100,
     "seo_aeo_score": 8.21
+  },
+  {
+    "keyword": "Coupons and promo codes complete guide: finding codes that actually work",
+    "title": "Coupons and Promo Codes Complete Guide: Codes That Work",
+    "description": "Our coupons and promo codes complete guide: finding codes that actually work, verifying savings, and avoiding expired or fake deals before checkout.",
+    "file": "coupons-and-promo-codes-complete-guide-finding-codes-that-actually-work.html",
+    "date": "2026-10-31",
+    "archetype": "authority_guide",
+    "archetype_confidence": 0.97,
+    "risk_level": "low",
+    "requires_human_review": false,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 8.64
   }
 ]
