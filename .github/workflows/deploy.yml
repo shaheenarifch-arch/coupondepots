@@ -39,7 +39,40 @@ jobs:
           cp -r img _site/img
           # Daily blog bot posts (seo-controller) live in articles/ beside the zip.
           if [ -d articles ]; then cp -r articles _site/articles; fi
+          # Author page the post bylines link to (/author/shaheen-arif/).
+          if [ -d author ]; then cp -r author _site/author; fi
           ls _site _site/img
+      - name: Add blog bot posts to sitemap.xml
+        # sitemap.xml is frozen inside site.zip, so new articles/ posts (and the
+        # author page) are appended here on every deploy. Help:
+        # https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+        run: |
+          python3 - <<'PY'
+          import pathlib, datetime, xml.etree.ElementTree as ET
+          ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
+          ET.register_namespace("", ns)
+          site = pathlib.Path("_site")
+          path = site / "sitemap.xml"
+          tree = ET.parse(path)
+          root = tree.getroot()
+          have = {u.findtext(f"{{{ns}}}loc", "").strip() for u in root.findall(f"{{{ns}}}url")}
+          added = 0
+          for d in ("articles", "author"):
+              for f in sorted((site / d).rglob("*.html")) if (site / d).is_dir() else []:
+                  rel = f.relative_to(site).as_posix()
+                  url = "https://coupondepots.info/" + (rel[:-len("index.html")] if rel.endswith("index.html") else rel)
+                  if url in have:
+                      continue
+                  day = datetime.date.fromtimestamp(f.stat().st_mtime).isoformat()
+                  u = ET.SubElement(root, f"{{{ns}}}url")
+                  ET.SubElement(u, f"{{{ns}}}loc").text = url
+                  ET.SubElement(u, f"{{{ns}}}lastmod").text = day
+                  ET.SubElement(u, f"{{{ns}}}priority").text = "0.8" if rel.endswith("index.html") else "0.7"
+                  have.add(url); added += 1
+          ET.indent(tree)
+          tree.write(path, encoding="utf-8", xml_declaration=True)
+          print(f"sitemap: added {added} URL(s), {len(have)} total")
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
