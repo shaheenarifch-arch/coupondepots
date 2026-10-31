@@ -73,6 +73,30 @@ jobs:
           tree.write(path, encoding="utf-8", xml_declaration=True)
           print(f"sitemap: added {added} URL(s), {len(have)} total")
           PY
+      - name: Add blog bot posts to llms.txt
+        # llms.txt is frozen inside site.zip too, so the daily guides in
+        # articles/posts.json are added here on every deploy. Help: https://llmstxt.org/
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, datetime
+          site = pathlib.Path("_site")
+          llms, manifest = site / "llms.txt", site / "articles" / "posts.json"
+          if not (llms.exists() and manifest.exists()):
+              raise SystemExit("llms.txt or articles/posts.json missing; skipped")
+          text = llms.read_text(encoding="utf-8")
+          posts = sorted(json.loads(manifest.read_text(encoding="utf-8")), key=lambda p: p.get("date", ""), reverse=True)
+          lines = ["## Daily buying guides", "- [All guides](https://coupondepots.info/articles/)"]
+          for p in posts:
+              if p.get("file") and p.get("title"):
+                  lines.append(f"- [{p['title']}](https://coupondepots.info/articles/{p['file']}): {p.get('description', '').strip()}")
+          section = "\n".join(lines) + "\n\n"
+          marker = "## About and policies"
+          text = text.replace(marker, section + marker, 1) if marker in text else text.rstrip() + "\n\n" + section
+          today = datetime.date.today().isoformat()
+          text = __import__("re").sub(r"Last updated: \d{4}-\d{2}-\d{2}", f"Last updated: {today}", text, count=1)
+          llms.write_text(text, encoding="utf-8")
+          print(f"llms.txt: added {len(lines) - 2} daily guide(s)")
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
