@@ -16,7 +16,8 @@ Homepage section `#amazon-picks` (first 8 products) and the full page `/amazon-d
 
 To add or swap a product, edit `AMAZON_PICKS` in `build.py`:
 - `asin`: the 10-character code after `/dp/` in the Amazon product URL.
-- `img`: optional, not shown on the site. Amazon product photos may only be displayed through Amazon's own API (Creators API), never copied or hotlinked from `m.media-amazon.com`, so cards are text-only.
+- `photo`: a real Unsplash stock photo id (the part after `photo-` in an images.unsplash.com URL) shown on the card as an illustrative image. Amazon's own product photos may only be displayed through Amazon's API (Creators API), never copied or hotlinked from `m.media-amazon.com`. Help: [Unsplash license](https://unsplash.com/license).
+- `img`: optional Amazon image id, not shown on the site (kept for when API access arrives).
 - `cat`: one of `home`, `hair`, `gifts`, `office` (labels live in `AMAZON_CATS`).
 - Bump `AMAZON_UPDATED` / `AMAZON_UPDATED_HUMAN`, then run `python3 build.py`.
 
