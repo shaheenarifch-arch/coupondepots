@@ -8,6 +8,9 @@ Premium rebuild of coupondepots.info. Every coupon is on the homepage, each vend
 3. GoDaddy DNS: A records for `@` → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153; CNAME `www` → `<your-github-user>.github.io`. Remove the Airo/GoDaddy website A record first.
 4. Google Search Console: verification meta is kept. Resubmit `https://coupondepots.info/sitemap.xml`.
 
+## New codes arrive automatically
+Coupon codes from Awin promo emails are added every day by the email-to-site pipeline: Gmail → `automation/promo-pipeline.gs` → `promos.json` → deploy. Setup and help: [automation/README.md](automation/README.md). The deploy now builds the site from `build.py` on every push and once a day, so expired codes drop off on their own.
+
 ## Add a new vendor
 Edit `build.py`: add the brand to `BRANDS`, add its offers to `OFFERS`, and add its page copy to `STORE_CONTENT`. Then run `python3 build.py`. The homepage, store page, sitemap, llms.txt and schema all update automatically.
 
