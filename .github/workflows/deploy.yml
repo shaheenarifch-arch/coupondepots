@@ -56,7 +56,7 @@ jobs:
           rm -rf _build _site && mkdir -p _build
           unzip -q source.zip -d _build
           cp promos.json _build/promos.json 2>/dev/null || true
-          IMG_DIR="$PWD/img" python3 _build/build.py
+          IMG_DIR="$PWD/img" ARTICLES_JSON="$PWD/articles/posts.json" python3 _build/build.py
           mv _build/site _site
           cp -r img _site/img
           # Daily blog bot posts (seo-controller) live in articles/ beside the zip.
