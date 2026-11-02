@@ -3,6 +3,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Daily rebuild (6:17 AM US Eastern) so expired codes drop off and dates stay fresh,
+  # even on days with no new promo emails. Help: https://docs.github.com/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule
+  schedule:
+    - cron: "17 11 * * *"
 permissions:
   contents: write
   pages: write
@@ -23,19 +27,37 @@ jobs:
           python-version: "3.12"
       - name: Fetch merchant images (first run only, then cached in repo)
         run: |
-          pip install --quiet pillow
+          pip install --quiet pillow markdown
           unzip -o -q source.zip images.json fetch_images.py
-          python fetch_images.py
+          # Add images for brands that arrived through promos.json (email-to-site pipeline).
+          python3 - <<'PY'
+          import json, os
+          imgs = json.load(open("images.json"))
+          have = {d["name"] for d in imgs}
+          promos = json.load(open("promos.json")) if os.path.exists("promos.json") else {}
+          for b in promos.get("brands", []):
+              im = b.get("image") or {}
+              if im.get("src") and b["slug"] not in have and not b.get("blocked"):
+                  imgs.append({"name": b["slug"], "src": im["src"].split("?")[0], "w": int(im.get("w", 1600)),
+                               "h": int(im.get("h", 900)), "pos": im.get("pos", "50% 50%"), "alt": im.get("alt", b["name"])})
+          json.dump(imgs, open("images.json", "w"), indent=2)
+          PY
+          python fetch_images.py || echo "Some images failed; those brands use the merchant's image URL until the next run"
       - name: Save images to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898+github-actions[bot]@users.noreply.github.com"
           git add img
           git diff --cached --quiet || (git commit -m "Add optimized merchant images" && git push)
-      - name: Unpack site
+      - name: Build site from source (build.py + promos.json)
+        # The site is generated on every deploy, so new codes in promos.json go live
+        # and expired ones drop off. site.zip is kept only as a manual fallback.
         run: |
-          mkdir -p _site
-          unzip -q site.zip -d _site
+          rm -rf _build _site && mkdir -p _build
+          unzip -q source.zip -d _build
+          cp promos.json _build/promos.json 2>/dev/null || true
+          IMG_DIR="$PWD/img" python3 _build/build.py
+          mv _build/site _site
           cp -r img _site/img
           # Daily blog bot posts (seo-controller) live in articles/ beside the zip.
           if [ -d articles ]; then cp -r articles _site/articles; fi
@@ -103,3 +125,17 @@ jobs:
           path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Ping IndexNow (Bing, Yandex and others) with every page
+        # Tells search engines the pages changed so they recrawl quickly. Help: https://www.indexnow.org/documentation
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request
+          key = "c7d3e9a14b6f42d8a0e5b1f9c2d4a6e8"
+          urls = re.findall(r"<loc>([^<]+)</loc>", open("_site/sitemap.xml").read())
+          body = json.dumps({"host": "coupondepots.info", "key": key,
+                             "keyLocation": f"https://coupondepots.info/{key}.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          print("IndexNow:", urllib.request.urlopen(req, timeout=30).status, len(urls), "URLs")
+          PY
