@@ -1,5 +1,5 @@
 {
-  "_help": "Written daily by automation/promo-pipeline.gs from Awin promo emails (see automation/README.md). You can also edit it by hand: add a brand under brands and its codes under offers. Offers without 'expires' stay listed for 30 days from 'listed'. Set \"blocked\": true on a brand to hide it.",
+  "_help": "Written daily by automation/promo-pipeline.gs from Awin promo emails (see automation/README.md). You can also edit it by hand: add a brand under brands and its codes under offers. Offers without 'expires' stay listed for 30 days from 'listed'. Set \"blocked\": true on a brand to hide it. Rakuten brands (network \"rakuten\") carry their own tracking link in \"link\" on the brand and on each offer.",
   "updated": "2026-11-02",
   "config": {
     "signup_url": ""
@@ -154,6 +154,139 @@
       "aff": 3067297,
       "slug": "simple-project",
       "name": "Simple Project US"
+    },
+    {
+      "mid": 53552,
+      "network": "rakuten",
+      "slug": "anker-solix",
+      "name": "Anker SOLIX",
+      "cat": "home",
+      "cat_label": "Portable & Home Power",
+      "site": "https://www.ankersolix.com/",
+      "tagline": "Portable power stations, solar panels and home backup",
+      "short": "Anker SOLIX makes portable power stations, solar panels, electric coolers and whole-home backup batteries.",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=53552&murl=https%3A%2F%2Fwww.ankersolix.com%2F&u1=cd-anker",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/0854/3820/2186/files/Frame_2121235110-Photoroom.png",
+        "w": 1600,
+        "h": 1600,
+        "pos": "50% 50%",
+        "alt": "Anker SOLIX EverFrost 2 electric cooler"
+      }
+    },
+    {
+      "mid": 54380,
+      "network": "rakuten",
+      "slug": "asap-tickets",
+      "name": "ASAP Tickets",
+      "cat": "travel",
+      "cat_label": "Flights",
+      "site": "https://www.asaptickets.com/",
+      "tagline": "Discounted international and domestic flights",
+      "short": "ASAP Tickets, with sister brands Skylux Travel and Vagamo, finds discounted economy, business and first-class fares.",
+      "link": "https://click.linksynergy.com/fs-bin/click?id=Lg3HrbhoGSk&offerid=2138138.2&type=3&subid=0&u1=cd-asap",
+      "image": {
+        "src": "https://www.asaptickets.com/static/img/openGraph/og_image.jpg",
+        "w": 1200,
+        "h": 630,
+        "pos": "50% 50%",
+        "alt": "ASAP Tickets flight deals"
+      }
+    },
+    {
+      "mid": 54389,
+      "network": "rakuten",
+      "slug": "cw-sellors",
+      "name": "C.W.Sellors",
+      "cat": "beauty",
+      "cat_label": "Jewellery (UK)",
+      "site": "https://www.cwsellors.co.uk/",
+      "tagline": "British gemstone jewellery and watches",
+      "short": "C.W.Sellors is a UK jeweller known for Whitby Jet, Preseli Bluestone and Blue John pieces, plus Clogau and Swiss watches.",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=54389&murl=https%3A%2F%2Fwww.cwsellors.co.uk%2F&u1=cd-cwsellors",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/0248/7892/files/Sterling_Silver_Amethyst_Tuberose_Clover_Necklace_P2851._c00cd2d6-0d46-4a69-b4e0-8380a524f48b.jpg",
+        "w": 1200,
+        "h": 1200,
+        "pos": "50% 50%",
+        "alt": "C.W.Sellors amethyst clover necklace"
+      }
+    },
+    {
+      "mid": 54397,
+      "network": "rakuten",
+      "slug": "dream-home-store",
+      "name": "Dream Home Store",
+      "cat": "home",
+      "cat_label": "Furniture (UK)",
+      "site": "https://dreamhomestore.co.uk/",
+      "tagline": "Affordable bedroom, dining and storage furniture",
+      "short": "Dream Home Store sells ottoman beds, wardrobes, dining sets and storage furniture with UK delivery.",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=54397&murl=https%3A%2F%2Fdreamhomestore.co.uk%2F&u1=cd-dreamhome",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/0564/3452/4316/files/curved-headboard-double-ottoman-bed-grey-angled-room.webp",
+        "w": 1600,
+        "h": 1600,
+        "pos": "50% 50%",
+        "alt": "Dream Home Store grey ottoman bed"
+      }
+    },
+    {
+      "mid": 50482,
+      "network": "rakuten",
+      "slug": "koa",
+      "name": "KOA Campgrounds",
+      "cat": "travel",
+      "cat_label": "Camping",
+      "site": "https://koa.com/",
+      "tagline": "500+ campgrounds with tent sites, RV hookups and cabins",
+      "short": "Kampgrounds of America runs 500+ campgrounds across the US and Canada; KOA Rewards members save 10% on stays.",
+      "link": "https://click.linksynergy.com/fs-bin/click?id=Lg3HrbhoGSk&offerid=1450220.43&type=3&subid=0&u1=cd-koa",
+      "image": {
+        "src": "https://koa.com/content/images/vkr/koa-care-camps.jpg",
+        "w": 1600,
+        "h": 550,
+        "pos": "50% 50%",
+        "alt": "KOA campground"
+      }
+    },
+    {
+      "mid": 24807,
+      "network": "rakuten",
+      "slug": "rushmypassport",
+      "name": "RushMyPassport",
+      "cat": "travel",
+      "cat_label": "Passports & Visas",
+      "site": "https://www.rushmypassport.com/",
+      "tagline": "Expedited US passports and travel visas",
+      "short": "RushMyPassport expedites new US passports and renewals; RushMyTravelVisa handles travel visas.",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=24807&murl=https%3A%2F%2Fwww.rushmypassport.com%2F&u1=cd-rmp",
+      "image": {
+        "src": "https://www.rushmypassport.com/assets/img/hero-home-v2_2x.ad1cd422.webp",
+        "w": 1102,
+        "h": 1302,
+        "pos": "50% 30%",
+        "alt": "RushMyPassport expedited passport service"
+      }
+    },
+    {
+      "mid": 815,
+      "network": "rakuten",
+      "slug": "sharper-image",
+      "name": "Sharper Image",
+      "cat": "tech",
+      "cat_label": "Gifts & Gadgets",
+      "site": "https://sharperimage.com/",
+      "tagline": "Gadgets, massagers and unique gifts",
+      "short": "Sharper Image sells gadgets, massagers, home comfort and gift ideas.",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=815&murl=https%3A%2F%2Fsharperimage.com%2F&u1=cd-sharper",
+      "image": {
+        "src": "https://cdn1.sharperimage.com/si/img/productImages/211256/211256-g1.jpg",
+        "w": 1000,
+        "h": 1000,
+        "pos": "50% 50%",
+        "alt": "Sharper Image massaging recliner"
+      }
     }
   ],
   "offers": [
@@ -530,6 +663,86 @@
       "holiday": true,
       "listed": "2026-10-31",
       "source": "Awin email 2026-10-31"
+    },
+    {
+      "mid": 53552,
+      "value": "SHOP",
+      "unit": "",
+      "title": "Portable power stations & solar panels",
+      "detail": "Power stations, solar panels and electric coolers for camping and home backup. Check Anker SOLIX for current prices.",
+      "listed": "2026-11-03",
+      "expires": "2026-11-29",
+      "holiday": true,
+      "source": "Rakuten 2026-11-03",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=53552&murl=https%3A%2F%2Fwww.ankersolix.com%2F&u1=cd-anker-deal",
+      "url": "https://www.ankersolix.com/"
+    },
+    {
+      "mid": 54380,
+      "value": "50%",
+      "unit": "OFF",
+      "title": "Flights with up to 50% off",
+      "detail": "Discounted international, domestic and Latin America fares from ASAP Tickets.",
+      "listed": "2026-11-03",
+      "source": "Rakuten 2026-11-03",
+      "link": "https://click.linksynergy.com/fs-bin/click?id=Lg3HrbhoGSk&offerid=2138138.2&type=3&subid=0&u1=cd-asap-deal",
+      "url": "https://www.asaptickets.com/"
+    },
+    {
+      "mid": 54389,
+      "value": "SHOP",
+      "unit": "",
+      "title": "British gemstone jewellery",
+      "detail": "Whitby Jet, Preseli Bluestone and Blue John pieces. Prices in GBP; ships from the UK.",
+      "listed": "2026-11-03",
+      "source": "Rakuten 2026-11-03",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=54389&murl=https%3A%2F%2Fwww.cwsellors.co.uk%2F&u1=cd-cwsellors-deal",
+      "url": "https://www.cwsellors.co.uk/"
+    },
+    {
+      "mid": 54397,
+      "value": "SHOP",
+      "unit": "",
+      "title": "Ottoman beds, wardrobes & dining sets",
+      "detail": "Affordable furniture with UK delivery. Check Dream Home Store for current prices.",
+      "listed": "2026-11-03",
+      "source": "Rakuten 2026-11-03",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=54397&murl=https%3A%2F%2Fdreamhomestore.co.uk%2F&u1=cd-dreamhome-deal",
+      "url": "https://dreamhomestore.co.uk/"
+    },
+    {
+      "mid": 50482,
+      "value": "10%",
+      "unit": "OFF",
+      "title": "Save 10% with KOA Rewards",
+      "detail": "Join KOA Rewards and save 10% on stays at 500+ KOA campgrounds. Terms set by KOA.",
+      "listed": "2026-11-03",
+      "source": "Rakuten 2026-11-03",
+      "link": "https://click.linksynergy.com/fs-bin/click?id=Lg3HrbhoGSk&offerid=1450220.43&type=3&subid=0&u1=cd-koa-deal",
+      "url": "https://koa.com/"
+    },
+    {
+      "mid": 24807,
+      "value": "FAST",
+      "unit": "",
+      "title": "Expedited passports & renewals",
+      "detail": "Get a US passport in as little as days. Processing times and fees are set by RushMyPassport and the State Department.",
+      "listed": "2026-11-03",
+      "source": "Rakuten 2026-11-03",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=24807&murl=https%3A%2F%2Fwww.rushmypassport.com%2F&u1=cd-rmp-deal",
+      "url": "https://www.rushmypassport.com/"
+    },
+    {
+      "mid": 815,
+      "value": "SHOP",
+      "unit": "",
+      "title": "Gadgets, massagers & gift ideas",
+      "detail": "Unique gifts and home comfort picks. Check Sharper Image for current prices.",
+      "listed": "2026-11-03",
+      "holiday": true,
+      "source": "Rakuten 2026-11-03",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=815&murl=https%3A%2F%2Fsharperimage.com%2F&u1=cd-sharper-deal",
+      "url": "https://sharperimage.com/"
     }
   ]
 }
