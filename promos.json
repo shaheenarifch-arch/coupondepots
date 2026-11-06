@@ -1,6 +1,6 @@
 {
   "_help": "Written daily by automation/promo-pipeline.gs from Awin promo emails (see automation/README.md). You can also edit it by hand: add a brand under brands and its codes under offers. Offers without 'expires' stay listed for 30 days from 'listed'. Set \"blocked\": true on a brand to hide it. Rakuten brands (network \"rakuten\") carry their own tracking link in \"link\" on the brand and on each offer.",
-  "updated": "2026-11-02",
+  "updated": "2026-11-05",
   "config": {
     "signup_url": ""
   },
@@ -287,9 +287,54 @@
         "pos": "50% 50%",
         "alt": "Sharper Image massaging recliner"
       }
+    },
+    {
+      "mid": 900001,
+      "network": "direct",
+      "slug": "txed-ebikes",
+      "name": "TXED eBikes",
+      "cat": "outdoor",
+      "cat_label": "Electric Bikes",
+      "site": "https://www.txedebikes.com/",
+      "tagline": "Fat tire, moped-style and trail electric bikes",
+      "short": "TXED eBikes sells fat tire, moped-style and 27.5-inch trail electric bikes to US riders, with codes entered at checkout.",
+      "link": "https://www.txedebikes.com/?utm_source=coupondepots&utm_medium=referral",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/0934/6111/9267/files/DSC08976.jpg",
+        "w": 2400,
+        "h": 2400,
+        "pos": "50% 55%",
+        "alt": "Rider on a TXED Trail electric bike"
+      }
     }
   ],
   "offers": [
+    {
+      "mid": 900001,
+      "code": "TXED2026",
+      "value": "$200",
+      "unit": "OFF",
+      "title": "$200 off the TXED Maverick e-bike",
+      "detail": "Single or Dual Battery Maverick. One use per order; can't be combined with other discounts. Enter the code at checkout.",
+      "url": "https://www.txedebikes.com/products/maverick-1500w-fat-tire-electric-bike",
+      "link": "https://www.txedebikes.com/products/maverick-1500w-fat-tire-electric-bike?utm_source=coupondepots&utm_medium=referral",
+      "holiday": true,
+      "listed": "2026-11-05",
+      "source": "Merchant email 2026-11-03"
+    },
+    {
+      "mid": 900001,
+      "code": "TXED1994",
+      "value": "$50",
+      "unit": "OFF",
+      "title": "$50 off US orders of $400+ (incl. Trail e-bike)",
+      "detail": "New and returning customers. Enter the code at checkout before payment.",
+      "url": "https://www.txedebikes.com/products/trail-1000w-electric-mountain-bike",
+      "link": "https://www.txedebikes.com/products/trail-1000w-electric-mountain-bike?utm_source=coupondepots&utm_medium=referral",
+      "holiday": true,
+      "listed": "2026-11-05",
+      "source": "Merchant email 2026-11-03"
+    },
     {
       "mid": 76364,
       "code": "SRBFBO",
