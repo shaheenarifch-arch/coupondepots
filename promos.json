@@ -306,6 +306,96 @@
         "pos": "50% 55%",
         "alt": "Rider on a TXED Trail electric bike"
       }
+    },
+    {
+      "mid": 107814,
+      "aff": 3075433,
+      "slug": "simbye",
+      "name": "Simbye",
+      "cat": "travel",
+      "cat_label": "Travel eSIM",
+      "site": "https://simbye.com/",
+      "tagline": "Travel eSIMs for 190+ countries",
+      "short": "Simbye sells prepaid travel eSIMs for 190+ countries, with unlimited data in 50+ destinations and real phone numbers in 20+.",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/1113/3337/6338/files/maldives-flag.webp",
+        "w": 1200,
+        "h": 800,
+        "pos": "50% 50%",
+        "alt": "Simbye travel eSIM for the Maldives"
+      }
+    },
+    {
+      "mid": 114336,
+      "aff": 3075433,
+      "slug": "house-of-sneakers",
+      "name": "House of Sneakers",
+      "cat": "fashion",
+      "cat_label": "Sneakers",
+      "site": "https://www.house-of-sneakers.de/",
+      "tagline": "Limited and sold-out sneakers",
+      "short": "House of Sneakers is a German store for limited and hard-to-find sneakers from adidas, Nike, New Balance and more. Prices in euros; ships across Europe.",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/0693/8660/0715/files/1044724_00_png_cb6a8729-b413-4d53-9563-9ce984498c03.png",
+        "w": 1200,
+        "h": 1200,
+        "pos": "50% 50%",
+        "alt": "adidas sneaker from House of Sneakers"
+      }
+    },
+    {
+      "mid": 127129,
+      "aff": 3075433,
+      "slug": "anthbot",
+      "name": "Anthbot",
+      "cat": "outdoor",
+      "cat_label": "Robot Lawn Mowers",
+      "site": "https://anthbot.com/",
+      "tagline": "Wire-free robot lawn mowers",
+      "short": "Anthbot makes wire-free robot lawn mowers like the M5 Pro and M9 Pro, plus replacement blades.",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/0761/6403/8958/files/m-pro-product-v_1.png",
+        "w": 1200,
+        "h": 1200,
+        "pos": "50% 50%",
+        "alt": "Anthbot M9 Pro robot lawn mower"
+      }
+    },
+    {
+      "mid": 128023,
+      "aff": 3075433,
+      "slug": "united-defense-tactical",
+      "name": "United Defense Tactical",
+      "cat": "learning",
+      "cat_label": "Safety Training",
+      "site": "https://uniteddefensetactical.com/",
+      "tagline": "Firearm safety and self-defense training",
+      "short": "United Defense Tactical offers firearm safety, concealed-carry and self-defense training courses.",
+      "image": {
+        "src": "https://ui.awin.com/images/upload/merchant/profile/128023.png",
+        "w": 400,
+        "h": 400,
+        "pos": "50% 50%",
+        "alt": "United Defense Tactical logo"
+      }
+    },
+    {
+      "mid": 129557,
+      "aff": 3075433,
+      "slug": "healsend",
+      "name": "HealSend",
+      "cat": "health",
+      "cat_label": "Online Care",
+      "site": "https://healsend.com/",
+      "tagline": "Online visits with licensed providers",
+      "short": "HealSend connects you with licensed providers online who review whether a medication is right for you, on simple monthly plans.",
+      "image": {
+        "src": "https://ui.awin.com/images/upload/merchant/profile/129557.png",
+        "w": 400,
+        "h": 400,
+        "pos": "50% 50%",
+        "alt": "HealSend logo"
+      }
     }
   ],
   "offers": [
@@ -788,6 +878,57 @@
       "source": "Rakuten 2026-11-03",
       "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=815&murl=https%3A%2F%2Fsharperimage.com%2F&u1=cd-sharper-deal",
       "url": "https://sharperimage.com/"
+    },
+    {
+      "mid": 107814,
+      "value": "SHOP",
+      "unit": "",
+      "title": "Travel eSIMs for 190+ countries",
+      "detail": "Prepaid data eSIMs from $2.95. Check your phone supports eSIM before you buy.",
+      "url": "https://simbye.com/",
+      "listed": "2026-11-17",
+      "source": "Awin join 2026-11-17"
+    },
+    {
+      "mid": 114336,
+      "value": "SHOP",
+      "unit": "",
+      "title": "Limited and sold-out sneakers",
+      "detail": "Rare adidas, Nike and New Balance pairs. German store, prices in euros.",
+      "url": "https://www.house-of-sneakers.de/",
+      "listed": "2026-11-17",
+      "source": "Awin join 2026-11-17"
+    },
+    {
+      "mid": 127129,
+      "value": "SHOP",
+      "unit": "",
+      "title": "Wire-free robot lawn mowers",
+      "detail": "Anthbot M5 Pro and M9 Pro robot mowers, plus replacement blades.",
+      "url": "https://anthbot.com/",
+      "listed": "2026-11-17",
+      "source": "Awin join 2026-11-17"
+    },
+    {
+      "mid": 128023,
+      "value": "SHOP",
+      "unit": "",
+      "title": "Firearm safety & self-defense courses",
+      "detail": "Book safety, concealed-carry and self-defense training.",
+      "url": "https://uniteddefensetactical.com/",
+      "listed": "2026-11-17",
+      "source": "Awin join 2026-11-17"
+    },
+    {
+      "mid": 129557,
+      "code": "150OFF",
+      "value": "$150",
+      "unit": "OFF",
+      "title": "$150 off for new patients",
+      "detail": "Code 150OFF for new HealSend patients. A licensed provider decides if a medication is right for you.",
+      "url": "https://healsend.com/",
+      "listed": "2026-11-17",
+      "source": "Awin profile 2026-11-17"
     }
   ]
 }
