@@ -62,7 +62,7 @@ jobs:
           # Daily blog bot posts (seo-controller) live in articles/ beside the zip.
           if [ -d articles ]; then cp -r articles _site/articles; fi
           # Blog hero photos (articles link to /images/blog/...).
-          if [ -d images ]; then cp -r images _site/images; fi
+          if [ -d images ]; then mkdir -p _site/images && cp -r images/. _site/images/; fi
           # Author page the post bylines link to (/author/shaheen-arif/).
           if [ -d author ]; then cp -r author _site/author; fi
           ls _site _site/img
