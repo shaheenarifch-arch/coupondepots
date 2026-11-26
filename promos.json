@@ -396,6 +396,63 @@
         "pos": "50% 50%",
         "alt": "HealSend logo"
       }
+    },
+    {
+      "mid": 47554,
+      "network": "rakuten",
+      "slug": "ouai",
+      "name": "OUAI",
+      "cat": "beauty",
+      "cat_label": "Hair Care",
+      "site": "https://theouai.com/",
+      "tagline": "Hair, body care and fragrance",
+      "short": "OUAI makes cruelty-free hair care, body care and fragrance, from detox shampoo to hair oil.",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=47554&murl=https%3A%2F%2Ftheouai.com%2F&u1=cd-ouai",
+      "image": {
+        "src": "https://theouai.com/cdn/shop/files/Holiday_Phase_II_Site_Asset_Navi_Block_518x700_e31f06ea-83c2-448d-9739-e44b87f2fd18.jpg",
+        "w": 1864,
+        "h": 2516,
+        "pos": "50% 50%",
+        "alt": "A bottle of OUAI Detox Shampoo"
+      }
+    },
+    {
+      "mid": 53633,
+      "network": "rakuten",
+      "slug": "paw-com",
+      "name": "Paw.com",
+      "cat": "home",
+      "cat_label": "Dog Beds & Blankets",
+      "site": "https://www.paw.com/",
+      "tagline": "Waterproof dog beds and blankets",
+      "short": "Paw.com makes luxury waterproof dog blankets, orthopedic dog beds and car covers.",
+      "link": "https://click.linksynergy.com/deeplink?id=Lg3HrbhoGSk&mid=53633&murl=https%3A%2F%2Fwww.paw.com%2F&u1=cd-paw",
+      "image": {
+        "src": "https://cdn.shopify.com/s/files/1/0810/5967/files/sheepgrayrunnerbedlifestyle.png",
+        "w": 2048,
+        "h": 2048,
+        "pos": "50% 50%",
+        "alt": "Paw.com PupRug faux fur memory foam dog bed in grey"
+      }
+    },
+    {
+      "mid": 54233,
+      "network": "rakuten",
+      "slug": "keeper-security",
+      "name": "Keeper Security",
+      "cat": "tech",
+      "cat_label": "Password Manager",
+      "site": "https://www.keepersecurity.com/",
+      "tagline": "Password manager for families and teams",
+      "short": "Keeper is a password manager that saves, creates and autofills strong passwords across your devices.",
+      "link": "https://click.linksynergy.com/fs-bin/click?id=Lg3HrbhoGSk&offerid=2065364.2&type=3&subid=0&u1=cd-keeper",
+      "image": {
+        "src": "https://www.keepersecurity.com/assets/images/pages/home/en_US/home-hero-desktop.webp",
+        "w": 718,
+        "h": 532,
+        "pos": "50% 50%",
+        "alt": "Keeper password manager vault on a laptop"
+      }
     }
   ],
   "offers": [
@@ -929,6 +986,17 @@
       "url": "https://healsend.com/",
       "listed": "2026-11-17",
       "source": "Awin profile 2026-11-17"
+    },
+    {
+      "mid": 54233,
+      "value": "50%",
+      "unit": "OFF",
+      "title": "Save 50% on Keeper Password Manager",
+      "detail": "Keeper's sale price for personal and family plans. The discount shows on Keeper's page; no code needed.",
+      "listed": "2026-11-26",
+      "source": "Rakuten text link 2026-11-26",
+      "link": "https://click.linksynergy.com/fs-bin/click?id=Lg3HrbhoGSk&offerid=2065364.2&type=3&subid=0&u1=cd-keeper-deal",
+      "url": "https://www.keepersecurity.com/"
     }
   ]
 }
